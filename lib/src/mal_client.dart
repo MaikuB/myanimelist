@@ -33,7 +33,8 @@ class MalClient {
       var result = new ResultDto<SearchAnimeResult>(null, response.statusCode);
       if (response.statusCode == HttpStatus.OK && response.body != null) {
         _xmlTransformer.parse(response.body);
-        var json = _xmlTransformer.toParker();
+        var jsonString = _xmlTransformer.toParker();
+        result.data = SearchAnimeResult.fromJson(json.decode(jsonString));
       }
 
       return result;
@@ -50,7 +51,8 @@ class MalClient {
       var result = new ResultDto<SearchMangaResult>(null, response.statusCode);
       if (response.statusCode == HttpStatus.OK && response.body != null) {
         _xmlTransformer.parse(response.body);
-        _xmlTransformer.toParker();
+        var jsonString = _xmlTransformer.toParker();
+        result.data = SearchMangaResult.fromJson(json.decode(jsonString));
       }
 
       return result;

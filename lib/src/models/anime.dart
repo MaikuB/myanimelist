@@ -1,5 +1,11 @@
-import 'package:myanimelist/src/models/entry.dart';
+import 'package:json_annotation/json_annotation.dart';
+import 'package:myanimelist/myanimelist.dart';
 
-class Anime {
+part 'anime.g.dart';
+
+@JsonSerializable()
+class Anime extends Object with _$AnimeSerializerMixin {
   List<Entry> entry;
+  Anime(this.entry);
+  factory Anime.fromJson(Map<String, dynamic> json) => _$AnimeFromJson(json);
 }
