@@ -5,5 +5,3 @@ export 'package:myanimelist/src/models/entry.dart';
 export 'package:myanimelist/src/models/manga.dart';
 export 'package:myanimelist/src/models/search_anime_result.dart';
 export 'package:myanimelist/src/models/search_manga_result.dart';
-
-
