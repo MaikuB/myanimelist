@@ -4,7 +4,7 @@ import 'package:myanimelist/myanimelist.dart';
 part 'search_anime_result.g.dart';
 
 @JsonSerializable()
-class SearchAnimeResult extends Object with _$SearchAnimeResultSerializerMixin {
+class SearchAnimeResult {
   Anime anime;
 
   SearchAnimeResult(this.anime);

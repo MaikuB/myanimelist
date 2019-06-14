@@ -31,7 +31,7 @@ class MalClient {
           "https://myanimelist.net/api/anime/search.xml?q=${query}",
           headers: _headers);
       var result = new ResultDto<SearchAnimeResult>(null, response.statusCode);
-      if (response.statusCode == HttpStatus.OK && response.body != null) {
+      if (response.statusCode == HttpStatus.ok && response.body != null) {
         _xmlTransformer.parse(response.body);
         var jsonString = _xmlTransformer.toParker();
         result.data = SearchAnimeResult.fromJson(json.decode(jsonString));
@@ -49,7 +49,7 @@ class MalClient {
           "https://myanimelist.net/api/manga/search.xml?q=${query}",
           headers: _headers);
       var result = new ResultDto<SearchMangaResult>(null, response.statusCode);
-      if (response.statusCode == HttpStatus.OK && response.body != null) {
+      if (response.statusCode == HttpStatus.ok && response.body != null) {
         _xmlTransformer.parse(response.body);
         var jsonString = _xmlTransformer.toParker();
         result.data = SearchMangaResult.fromJson(json.decode(jsonString));

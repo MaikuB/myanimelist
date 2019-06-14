@@ -3,15 +3,14 @@
 part of 'search_manga_result.dart';
 
 // **************************************************************************
-// Generator: JsonSerializableGenerator
+// JsonSerializableGenerator
 // **************************************************************************
 
-SearchMangaResult _$SearchMangaResultFromJson(Map<String, dynamic> json) =>
-    new SearchMangaResult(json['manga'] == null
-        ? null
-        : new Manga.fromJson(json['manga'] as Map<String, dynamic>));
-
-abstract class _$SearchMangaResultSerializerMixin {
-  Manga get manga;
-  Map<String, dynamic> toJson() => <String, dynamic>{'manga': manga};
+SearchMangaResult _$SearchMangaResultFromJson(Map<String, dynamic> json) {
+  return SearchMangaResult(json['manga'] == null
+      ? null
+      : Manga.fromJson(json['manga'] as Map<String, dynamic>));
 }
+
+Map<String, dynamic> _$SearchMangaResultToJson(SearchMangaResult instance) =>
+    <String, dynamic>{'manga': instance.manga};

@@ -4,7 +4,7 @@ import 'package:myanimelist/myanimelist.dart';
 part 'manga.g.dart';
 
 @JsonSerializable()
-class Manga extends Object with _$MangaSerializerMixin {
+class Manga {
   List<Entry> entry;
   Manga(this.entry);
   factory Manga.fromJson(Map<String, dynamic> json) => _$MangaFromJson(json);

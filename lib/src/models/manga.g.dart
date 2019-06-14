@@ -3,16 +3,14 @@
 part of 'manga.dart';
 
 // **************************************************************************
-// Generator: JsonSerializableGenerator
+// JsonSerializableGenerator
 // **************************************************************************
 
-Manga _$MangaFromJson(Map<String, dynamic> json) => new Manga((json['entry']
-        as List)
-    ?.map(
-        (e) => e == null ? null : new Entry.fromJson(e as Map<String, dynamic>))
-    ?.toList());
-
-abstract class _$MangaSerializerMixin {
-  List<Entry> get entry;
-  Map<String, dynamic> toJson() => <String, dynamic>{'entry': entry};
+Manga _$MangaFromJson(Map<String, dynamic> json) {
+  return Manga((json['entry'] as List)
+      ?.map((e) => e == null ? null : Entry.fromJson(e as Map<String, dynamic>))
+      ?.toList());
 }
+
+Map<String, dynamic> _$MangaToJson(Manga instance) =>
+    <String, dynamic>{'entry': instance.entry};
