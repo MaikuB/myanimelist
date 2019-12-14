@@ -1,3 +1,6 @@
+# [0.1.0]
+* **BREAKING CHANGES** bump dependencies
+
 # [0.0.3]
 * Update dependencies
 
